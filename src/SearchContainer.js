@@ -8,28 +8,29 @@ const SearchContainer = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    try {
-      const apiKey = process.env.REACT_APP_STOCK_API_KEY;
-      var options = {
-        method: "GET",
-        url: `https://yfapi.net/v11/finance/quoteSummary/${query}`,
-        params: { modules: "defaultKeyStatistics,assetProfile" },
-        headers: {
-          "x-api-key": "i5On2nDfGB5pnfrMoXH1v5tuJXaMepfG5FnA1GxK",
-        },
-      };
-      const response = await fetch(options);
-      const data = await response.json();
-      setResults(data);
-      console.log(data);
-    } catch (err) {
-      console.log(err);
-    }
+    const apiKey = process.env.REACT_APP_STOCK_API_KEY;
+    var options = {
+      method: "GET",
+      url: `https://yfapi.net/v6/finance/quote?region=US&lang=en&symbols=${query}`,
+      params: { modules: "defaultKeyStatistics,assetProfile" },
+      headers: {
+        "x-api-key": "i5On2nDfGB5pnfrMoXH1v5tuJXaMepfG5FnA1GxK",
+      },
+    };
+    axios
+      .request(options)
+      .then(function (response) {
+        console.log(response.data.quoteResponse.result[0].symbol);
+        setResults(response.data);
+        console.log(results);
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   }
   function handleChange(e) {
     setQuery(e.target.value);
   }
-
   return (
     <div>
       <Search

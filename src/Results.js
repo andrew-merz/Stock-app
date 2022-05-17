@@ -1,11 +1,11 @@
 function Results(props) {
-  const showData = props.results.map((stock, idx) => {
-    return (
-      <div>
-        <li key={idx}>{stock.ticker}</li>
-      </div>
-    );
-  });
-  return <div>{showData}</div>;
+  const showStock = props.results.quoteResponse.result[0];
+  console.log(showStock);
+  return (
+    <div>
+      <h1>{showStock.symbol}</h1>
+    </div>
+  );
 }
+
 export default Results;
