@@ -2,6 +2,7 @@ import { useState } from "react";
 import Search from "./Search";
 import Results from "./Results";
 import axios from "axios";
+
 const SearchContainer = () => {
   const [query, setQuery] = useState([]);
   const [results, setResults] = useState([]);
@@ -38,7 +39,7 @@ const SearchContainer = () => {
         handleChange={handleChange}
         query={query}
       />
-      <Results results={results} />
+      {results ? <Results results={results} /> : null}
     </div>
   );
 };
