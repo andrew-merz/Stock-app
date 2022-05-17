@@ -1,24 +1,27 @@
 import { useState } from "react";
 import Search from "./Search";
 import Results from "./Results";
-
+import axios from "axios";
 const SearchContainer = () => {
   const [query, setQuery] = useState([]);
   const [results, setResults] = useState([]);
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(query);
-    console.log(results.ticker);
     try {
-      console.log("works");
-
       const apiKey = process.env.REACT_APP_STOCK_API_KEY;
-      const URL = `https://api.polygon.io/v3/reference/tickers?market=stocks&active=true&sort=ticker&order=asc&limit=10&apiKey=6YK4tjC3E7VPriTopxjWVuhwsA1lSJPN`;
-      const response = await fetch(URL);
+      var options = {
+        method: "GET",
+        url: `https://yfapi.net/v11/finance/quoteSummary/${query}`,
+        params: { modules: "defaultKeyStatistics,assetProfile" },
+        headers: {
+          "x-api-key": "i5On2nDfGB5pnfrMoXH1v5tuJXaMepfG5FnA1GxK",
+        },
+      };
+      const response = await fetch(options);
       const data = await response.json();
-      setResults(data.results);
-      console.log(data.results);
+      setResults(data);
+      console.log(data);
     } catch (err) {
       console.log(err);
     }

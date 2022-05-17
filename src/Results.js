@@ -1,9 +1,9 @@
 function Results(props) {
   const showData = props.results.map((stock, idx) => {
     return (
-      <h1>
-        {stock.name} key={idx}
-      </h1>
+      <div>
+        <li key={idx}>{stock.ticker}</li>
+      </div>
     );
   });
   return <div>{showData}</div>;
