@@ -1,8 +1,8 @@
 import "./App.css";
-import { useState } from "react";
+
 import React from "react";
 import SearchContainer from "./SearchContainer";
-
+import Home from "./Home";
 function App() {
   return (
     <div className="App">

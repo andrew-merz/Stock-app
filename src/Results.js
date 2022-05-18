@@ -1,6 +1,8 @@
 function Results(props) {
   const showStock = props.results.quoteResponse?.result[0];
-  //console.log(showStock);
+  const stockSummary =
+    props.summary.quoteSummary?.result[0].assetProfile.longBusinessSummary;
+
   if (!showStock) return null;
   return (
     <div>
@@ -8,6 +10,7 @@ function Results(props) {
         <h1>
           {showStock.displayName} ({showStock.symbol})
         </h1>
+        <p>{stockSummary}</p>
       </div>
       <div className="Stats">
         <h2>Stats</h2>
