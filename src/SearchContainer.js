@@ -39,7 +39,8 @@ const SearchContainer = () => {
         handleChange={handleChange}
         query={query}
       />
-      {results ? <Results results={results} /> : null}
+
+      <Results results={results} />
     </div>
   );
 };
