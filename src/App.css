@@ -3,3 +3,35 @@
   background-color: black;
   color: white;
 }
+.chart {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  margin: 20px 30px 0px 30px;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+.chart-data {
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  border: 2px solid white;
+  margin: 50px;
+}
+.trending {
+  display: flex;
+  justify-content: space-evenly;
+
+  margin: 60px 30px 0px 30px;
+
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  height: 180px;
+}
+.trending-stock {
+  border: 2px solid white;
+  margin: 12.5px;
+  height: 150px;
+  width: 150px;
+  border-radius: 8%;
+}
