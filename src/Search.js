@@ -1,6 +1,6 @@
 function Search(props) {
   return (
-    <div>
+    <div className="search-bar">
       <form onSubmit={props.handleSubmit}>
         <input
           type="text"
