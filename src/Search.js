@@ -1,15 +1,21 @@
+import { FaSearch } from "react-icons/fa";
 function Search(props) {
   return (
-    <div className="search-bar">
-      <form onSubmit={props.handleSubmit}>
-        <input
-          type="text"
-          placeholder="Search"
-          value={props.query}
-          onChange={props.handleChange}
-        />
-        <button>submit</button>
-      </form>
+    <div className="wrap">
+      <div className="search-bar">
+        <form onSubmit={props.handleSubmit}>
+          <input
+            type="text"
+            class="searchTerm"
+            placeholder="Search"
+            value={props.query}
+            onChange={props.handleChange}
+          />
+        </form>
+        <button className="searchButton">
+          <FaSearch />
+        </button>
+      </div>
     </div>
   );
 }
