@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
-function Home() {
+function Trending() {
   const [trending, setTrending] = useState([]);
 
   useEffect(() => {
@@ -10,7 +10,7 @@ function Home() {
       url: `https://yfapi.net/v1/finance/trending/US`,
       params: { modules: "defaultKeyStatistics,assetProfile" },
       headers: {
-        "x-api-key": "i5On2nDfGB5pnfrMoXH1v5tuJXaMepfG5FnA1GxK",
+        "x-api-key": "mfvypoCS9o8suYiYPQVlw20XXI9Xn657Y48tiQfc",
       },
     };
     axios
@@ -25,13 +25,15 @@ function Home() {
   }, []);
   if (!trending) return null;
   return (
-    <div className="trending-stock">
-      {trending.map((trend, idx) => (
-        <div key={idx}>
-          <h2>{trend.symbol}</h2>
+    <div className="trending">
+      {trending.slice(0, 10).map((trend, idx) => (
+        <div className="trending-stock">
+          <div key={idx}>
+            <h2>{trend.symbol}</h2>
+          </div>
         </div>
       ))}
     </div>
   );
 }
-export default Home;
+export default Trending;

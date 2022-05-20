@@ -16,7 +16,7 @@ const SearchContainer = () => {
       url: `https://yfapi.net/v6/finance/quote?region=US&lang=en&symbols=${query}`,
       params: { modules: "defaultKeyStatistics,assetProfile" },
       headers: {
-        "x-api-key": "i5On2nDfGB5pnfrMoXH1v5tuJXaMepfG5FnA1GxK",
+        "x-api-key": "mfvypoCS9o8suYiYPQVlw20XXI9Xn657Y48tiQfc",
       },
     };
     axios
@@ -34,7 +34,7 @@ const SearchContainer = () => {
       url: `https://yfapi.net/v11/finance/quoteSummary/${query}`,
       params: { modules: "defaultKeyStatistics,assetProfile" },
       headers: {
-        "x-api-key": "i5On2nDfGB5pnfrMoXH1v5tuJXaMepfG5FnA1GxK",
+        "x-api-key": "mfvypoCS9o8suYiYPQVlw20XXI9Xn657Y48tiQfc",
       },
     };
     axios

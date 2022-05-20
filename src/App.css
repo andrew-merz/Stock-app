@@ -6,12 +6,11 @@
 /* Home page styling */
 .title {
   display: flex;
-  justify-content: right;
-  margin: 30px 30px 0px 0px;
+  justify-content: center;
 }
 .chart {
   border-top: 2px solid white;
-  border-bottom: 2px solid white;
+
   margin: 20px 30px 0px 30px;
 
   display: flex;
@@ -22,6 +21,7 @@
   width: 400px;
   height: 400px;
   border: 2px solid white;
+
   margin: 50px;
 }
 .trending-title {
@@ -32,20 +32,26 @@
 }
 .trending {
   display: flex;
-  justify-content: space-evenly;
+
   margin: 0px 30px 0px 30px;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
-  height: 180px;
+  height: 110px;
 }
 .trending-stock {
   border: 2px solid white;
-  margin: 12.5px;
-  height: 150px;
+  display: flex;
+  justify-content: center;
+  height: 110px;
   width: 150px;
-  border-radius: 8%;
 }
 /* Show page styling */
+
+.container .info {
+  display: flex;
+  justify-content: space-around;
+  color: rgb(31, 194, 28);
+}
 .summary {
   display: flex;
   text-align: left;
