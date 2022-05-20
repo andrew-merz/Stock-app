@@ -49,7 +49,7 @@
 
 .container .info {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   color: rgb(31, 194, 28);
 }
 .summary {
@@ -62,9 +62,9 @@
 }
 .Stats {
   display: flex;
-  justify-content: space-around;
-  height: 300px;
-  margin-left: 1000px;
+  justify-content: space-evenly;
+  height: 200px;
+  margin-left: 80%;
   border: 2px solid white;
   border-right: 2px solid black;
 }

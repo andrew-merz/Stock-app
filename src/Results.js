@@ -1,9 +1,7 @@
 import "./App.css";
 function Results(props) {
   const showStock = props.results.quoteResponse?.result[0];
-  const stockSummary =
-    props.summary.quoteSummary?.result[0].assetProfile.longBusinessSummary;
-
+  const stockSummary = props.summary.quoteSummary?.result[0].assetProfile;
   if (!showStock) return null;
   return (
     <div>
@@ -61,7 +59,7 @@ function Results(props) {
         <h2>About</h2>
       </div>
       <div className="summary">
-        <p> {stockSummary}</p>
+        <p> {stockSummary.longBusinessSummary}</p>
       </div>
     </div>
   );
