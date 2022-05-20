@@ -6,7 +6,7 @@ function Search(props) {
         <form onSubmit={props.handleSubmit}>
           <input
             type="text"
-            class="searchTerm"
+            className="searchTerm"
             placeholder="Search"
             value={props.query}
             onChange={props.handleChange}

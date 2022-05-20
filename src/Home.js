@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "./App.css";
 function Home() {
   const [trending, setTrending] = useState([]);
 
@@ -21,11 +22,10 @@ function Home() {
       .catch(function (error) {
         console.error(error);
       });
-    getTrending();
-  }, [url]);
+  }, []);
   if (!trending) return null;
   return (
-    <div className="trending">
+    <div className="trending-stock">
       {trending.map((trend, idx) => (
         <div key={idx}>
           <h2>{trend.symbol}</h2>
@@ -34,3 +34,4 @@ function Home() {
     </div>
   );
 }
+export default Home;

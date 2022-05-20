@@ -12,7 +12,7 @@ function Results(props) {
           {showStock.displayName} ({showStock.symbol})
         </h1>
         <h1>Range: {showStock.regularMarketDayRange}</h1>
-        <h1>Change {showStock.regularMarketChangePercent}</h1>
+        <h1>Change {showStock.regularMarketChangePercent}%</h1>
       </div>
       <h2>Stats</h2>
       <div className="Stats">

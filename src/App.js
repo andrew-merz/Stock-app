@@ -2,7 +2,8 @@ import "./App.css";
 
 import React from "react";
 import SearchContainer from "./SearchContainer";
-//import Home from "./Home";
+import Home from "./Home";
+import Market from "./Market";
 function App() {
   return (
     <div className="App">
@@ -13,46 +14,12 @@ function App() {
       <SearchContainer />
 
       <div className="chart">
-        <div className="chart-data">
-          <h3>Chart</h3>
-        </div>
-        <div className="chart-data">
-          <h3>Chart</h3>
-        </div>
-        <div className="chart-data">
-          <h3>Chart</h3>
-        </div>
+        <Market />
       </div>
       <div className="trending-title">
         <h2>Trending</h2>
       </div>
-      <div className="trending">
-        <div className="trending-stock">
-          <h4>stock name</h4>
-          <h2> current price</h2>
-          <h5>+1.35%</h5>
-        </div>
-        <div className="trending-stock">
-          <h4>stock name</h4>
-          <h2> current price</h2>
-          <h5>+1.35%</h5>
-        </div>
-        <div className="trending-stock">
-          <h4>stock name</h4>
-          <h2> current price</h2>
-          <h5>+1.35%</h5>
-        </div>
-        <div className="trending-stock">
-          <h4>stock name</h4>
-          <h2> current price</h2>
-          <h5>+1.35%</h5>
-        </div>
-        <div className="trending-stock">
-          <h4>stock name</h4>
-          <h2> current price</h2>
-          <h5>+1.35%</h5>
-        </div>
-      </div>
+      <Home />
     </div>
   );
 }
